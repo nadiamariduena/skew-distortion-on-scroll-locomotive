@@ -7,6 +7,26 @@ import "locomotive-scroll/src/locomotive-scroll.scss";
 import imagesLoaded from "imagesloaded";
 import LocomotiveScroll from "locomotive-scroll";
 //
+/*
+
+      The following clamp** function
+      is related to the skew, since
+      its a bit too strong this function
+      will serve to control the amount of the 
+      skew on the images.
+ 
+ */
+
+const clamp = (value, min, max) =>
+  // if the value is sm or equal to min then we return minimum,
+  // BUT if the value is greater or equel to max we return maximum ,
+  // OR else we return the value
+  value <= min ? min : value >= max ? max : value;
+
+//
+//
+//
+
 //  You will pass the css DOM selector
 const preloadImages = (selector) => {
   // the resolve will be pass as the promise
@@ -23,7 +43,7 @@ const preloadImages = (selector) => {
 /*
 
 
- *
+ 
  */
 const Home = () => {
   //
@@ -67,10 +87,15 @@ const Home = () => {
       scroll.current.cache = scroll.current.current;
 
       // ________ The transforming of the images ________
-
-      leftColumnRef.current.style.transform = `skewY(${distance}deg)`;
+      console.log(distance);
+      // leftColumnRef.current.style.transform = `skewY(${distance}deg)`;
+      leftColumnRef.current.style.transform = `skewY(${clamp(
+        distance,
+        -10,
+        10
+      )}deg)`;
     });
-    //
+    // You can play with the clamp value, lets say add -5, 5, this is less of course or -20, 20 this is more
     //
     //
     Promise.all([preloadImages(".grid-item-media")]).then(() => {

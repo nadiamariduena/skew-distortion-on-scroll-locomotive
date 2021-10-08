@@ -1012,9 +1012,9 @@ body {
 <br>
 <br>
 
-# 🍌🍌🍌🍌
+# 🍌🍌 **_THE SKEW_** 🍌🍌
 
-### NOW I will proceed to "Transform" the images
+### Now I will proceed to "Transform" the images
 
 > the images will SKEW a bit when the user will launch the scroll
 
@@ -1030,4 +1030,43 @@ body {
 
 [<img src="/src/img_readme/locomotive_skew1.gif"/>]()
 
-#### But if you notice, its a bit too much, so to clamp the value or reduce the strength we will have to modify the following:
+#### But if you notice, its a bit too much, so to clamp the value or reduce the strength we will have to CREATE a small function:
+
+```javascript
+/*
+
+      The following clamp** function
+      is related to the skew, since
+      its a bit too strong when scrollinh, this function
+      will serve to control the amount of the 
+      skew on the images.
+ 
+ */
+
+const clamp = (value, min, max) =>
+  // if the value is sm or equal to min then we return minimum,
+  // BUT if the value is greater or equel to max we return maximum ,
+  // OR else we return the value
+  value <= min ? min : value >= max ? max : value;
+
+//
+```
+
+#### now replace the following in the useEffect
+
+```javascript
+//
+  // ________ The transforming of the images ________
+  console.log(distance);
+  // replace this: leftColumnRef.current.style.transform = `skewY(${distance}deg)`;
+  // for this:
+  leftColumnRef.current.style.transform = `skewY(${clamp(
+    distance,
+    -10,
+    10
+  )}deg)`;
+});
+// You can play with the clamp value, lets say add -5, 5, this is less of course or -20, 20 this is more
+//
+//
+```
