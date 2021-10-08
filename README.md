@@ -1052,7 +1052,7 @@ const clamp = (value, min, max) =>
 //
 ```
 
-#### now replace the following in the useEffect
+#### Now replace the following in the useEffect
 
 ```javascript
 //
@@ -1070,3 +1070,46 @@ const clamp = (value, min, max) =>
 //
 //
 ```
+
+<br>
+
+#### We need to do it 2 more times (for the other columns)
+
+```javascript
+// ________ The transforming of the images ________
+//
+console.log(distance);
+// leftColumnRef.current.style.transform = `skewY(${distance}deg)`;
+// You can play with the clamp value, lets say add -5, 5, this is less of course or -20, 20 this is more
+leftColumnRef.current.style.transform = `skewY(${clamp(distance, -10, 10)}deg)`;
+middleColumnRef.current.style.transform = `skewY(${clamp(
+  distance,
+  -10,
+  10
+)}deg)`;
+rightColumnRef.current.style.transform = `skewY(${clamp(
+  distance,
+  -10,
+  10
+)}deg)`;
+```
+
+<br>
+<br>
+
+#### Changing the scroll direction of the Middle Column
+
+> change this: **-distance,** to negative direction
+
+```javascript
+// ________ The transforming of the images ________
+//
+
+middleColumnRef.current.style.transform = `skewY(${clamp(
+  -distance,
+  -10,
+  10
+)}deg)`;
+```
+
+[<img src="/src/img_readme/locomotive_skew2_negative_direction.gif"/>]()

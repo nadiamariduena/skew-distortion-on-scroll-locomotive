@@ -87,15 +87,27 @@ const Home = () => {
       scroll.current.cache = scroll.current.current;
 
       // ________ The transforming of the images ________
+      //
       console.log(distance);
       // leftColumnRef.current.style.transform = `skewY(${distance}deg)`;
+      // You can play with the clamp value, lets say add -5, 5, this is less of course or -20, 20 this is more
       leftColumnRef.current.style.transform = `skewY(${clamp(
         distance,
         -10,
         10
       )}deg)`;
+      middleColumnRef.current.style.transform = `skewY(${clamp(
+        -distance,
+        -10,
+        10
+      )}deg)`;
+      rightColumnRef.current.style.transform = `skewY(${clamp(
+        distance,
+        -10,
+        10
+      )}deg)`;
     });
-    // You can play with the clamp value, lets say add -5, 5, this is less of course or -20, 20 this is more
+
     //
     //
     Promise.all([preloadImages(".grid-item-media")]).then(() => {
