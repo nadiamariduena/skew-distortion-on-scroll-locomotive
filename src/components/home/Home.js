@@ -153,10 +153,12 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="middle-column" ref={middleColumnRef}>
-          {middleChunk.map(({ id, url, description }, index) => (
-            <GridItem key={id} url={url} description={description} />
-          ))}
+        <div className="middle-column" data-scroll data-scroll-speed="-5">
+          <div ref={middleColumnRef}>
+            {middleChunk.map(({ id, url, description }, index) => (
+              <GridItem key={id} url={url} description={description} />
+            ))}
+          </div>
         </div>
 
         <div className="right-column" ref={rightColumnRef}>
