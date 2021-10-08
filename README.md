@@ -1,5 +1,10 @@
 ### Small notice:
-> After 7 months of teaching myself blender, I am back to code, and the reason for that is because i need both to reach my 3d visualization goals.
+> **After 7 months of teaching myself blender**, I am back to code, and the reason for that is because i need both to reach  [my 3d visualization/configurator](https://sketchfab.com/) goals.
+
+
+What is a 3D configurator?
+
+A 3D product configurator is a way to let your customers personalize a product to their specifications. The added bonus of the 3D element is that it allows your customers to interact with your products online in real time.
 
 >So here is my first project to refresh or re connect with javascript and react.
 
