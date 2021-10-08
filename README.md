@@ -1,3 +1,10 @@
+### Small notice:
+> After 7 months of teaching myself blender, I am back to code, and the reason for that is because i need both to reach my 3d visualization goals.
+
+>So here is my first project to refresh or re connect with javascript and react.
+
+# 🍌
+
 # CREDITS:
 
 Big thanks to **[
@@ -36,7 +43,7 @@ npm i locomotive-scroll
 npm i gsap
 ```
 
-## ONCE IT'S ready 🍌
+## Once it's ready 🍌
 
 > ADD A home folder inside the components folder, inside of it add a file and call it Home.js
 
