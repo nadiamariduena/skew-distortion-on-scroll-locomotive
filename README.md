@@ -89,14 +89,6 @@ const photos = [
 export default photos;
 ```
 
-# .SPLICE 🥥
-
-> **The Array.splice() method adds array elements**
-> the splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. To access part of an array without modifying it, see slice().
-
-> READ MORE ABOUT SPLICE:
-> [Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
-
 #### Next we will get the photos and split them in Chunks
 
 ```javascript
@@ -108,6 +100,14 @@ export default photos;
   /*
 
 ```
+
+# .SPLICE 🥥
+
+> **The Array.splice() method adds array elements**
+> the splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. To access part of an array without modifying it, see slice().
+
+> READ MORE ABOUT SPLICE:
+> [Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 #### Add each chunk to the correspondent block
 
@@ -1026,7 +1026,7 @@ body {
     // dont forget to add the deg otherwise it will not work!!
 ```
 
-#####  Dont forget to add the deg otherwise it will not work!!
+##### Dont forget to add the deg otherwise it will not work!!
 
 [<img src="/src/img_readme/locomotive_skew1.gif"/>]()
 
